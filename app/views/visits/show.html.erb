@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @visit.time %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @visit.location %>
+</p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @visit.lesson %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @visit.description %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @visit.summary %>
+</p>
+
+<%= link_to 'Edit', edit_visit_path(@visit) %> |
+<%= link_to 'Back', visits_path %>

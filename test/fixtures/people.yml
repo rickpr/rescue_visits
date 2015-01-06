@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  name: MyString
+  phone: MyString
+  address: MyString
+  age: 2015-01-01 03:15:39
+  gender: MyString
+  attendance: MyString
+  baptism: 2015-01-01 03:15:39
+  confirmation: 2015-01-01 03:15:39
+  priesthood: 2015-01-01 03:15:39
+  help: MyText
+  teacher_id: 
+
+two:
+  category: MyString
+  name: MyString
+  phone: MyString
+  address: MyString
+  age: 2015-01-01 03:15:39
+  gender: MyString
+  attendance: MyString
+  baptism: 2015-01-01 03:15:39
+  confirmation: 2015-01-01 03:15:39
+  priesthood: 2015-01-01 03:15:39
+  help: MyText
+  teacher_id: 

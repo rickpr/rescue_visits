@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @person.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @person.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @person.address %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @person.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @person.gender %>
+</p>
+
+<p>
+  <strong>Attendance:</strong>
+  <%= @person.attendance %>
+</p>
+
+<p>
+  <strong>Baptism:</strong>
+  <%= @person.baptism %>
+</p>
+
+<p>
+  <strong>Confirmation:</strong>
+  <%= @person.confirmation %>
+</p>
+
+<p>
+  <strong>Priesthood:</strong>
+  <%= @person.priesthood %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @person.help %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @person.teacher %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

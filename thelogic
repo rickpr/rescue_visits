@@ -1,0 +1,41 @@
+There will need to be at least three distinct and possibly unrelated entites:
+
+Fellowshippers/Teachers
+
+Visitees, going to go with people as official database term
+
+Visits
+
+Teachers need the following fields:
+Name
+Phone Number
+has_many people
+has_many visits (via join!)
+
+People need the following fields:
+Type
+Name
+Phone Number
+Address
+Age (actually acts as birthday)
+Gender
+Times attended church
+Baptism date
+Confirmation Date
+Priesthood Ordination Date
+Help Needed
+belongs_to teacher
+has_many visits (via join!)
+
+Visits need the following properties
+Time/Date
+Location (if different from person's address)
+Lesson to teach
+Description
+Summary/completion notes
+has_many teacher (via join!)
+has_many person (via join!)
+
+Two join tables:
+visit_person
+visit_teacher

@@ -1,0 +1,2 @@
+module VisitPeopleHelper
+end
