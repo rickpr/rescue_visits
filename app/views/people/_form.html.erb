@@ -1,65 +1,26 @@
-<%= form_for(@person) do |f| %>
+<div class="row">
+<div class="col-xs-4">
+<%= bootstrap_form_for @person do |f| %>
   <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
-
-      <ul>
       <% @person.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <script type="text/javascript">
+        $.growl.error({ message: "<%= j message %>"});
+        </script>
       <% end %>
-      </ul>
-    </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.datetime_select :age %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :attendance %><br>
-    <%= f.text_field :attendance %>
-  </div>
-  <div class="field">
-    <%= f.label :baptism %><br>
-    <%= f.datetime_select :baptism %>
-  </div>
-  <div class="field">
-    <%= f.label :confirmation %><br>
-    <%= f.datetime_select :confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :priesthood %><br>
-    <%= f.datetime_select :priesthood %>
-  </div>
-  <div class="field">
-    <%= f.label :help %><br>
-    <%= f.text_area :help %>
-  </div>
-  <div class="field">
-    <%= f.label :teacher_id %><br>
-    <%= f.text_field :teacher_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.select :category, ["Investigator","Less Active","Recent Convert"] %>
+  <%= f.text_field :name %>
+  <%= f.text_field :phone %>
+  <%= f.text_field :address %>
+  <%= f.text_field :age, class: 'datepicker' %>
+  <%= f.select :gender, ["Male","Female"] %>
+  <%= f.number_field :attendance %>
+  <%= f.text_field :baptism, class: 'datepicker' %>
+  <%= f.text_field :confirmation, class: 'datepicker' %>
+  <%= f.text_field :priesthood, class: 'datepicker' %>
+  <%= f.text_area :help %>
+  <%= f.select :teacher_id, Teacher.all.map {|t| [t.name, t.id]} %>
+  <%= f.primary %>
 <% end %>
+</div>
+</div>

@@ -16,4 +16,17 @@
 //= require turbolinks
 //= require moment
 //= require fullcalendar
+//= require bootstrap-datetimepicker
 //= require_tree .
+$(function () {
+  $('.datepicker').datetimepicker({
+    format: "YYYY-MM-DD hh:mm A",
+    icons: {
+      time: "fa fa-clock-o",
+      date: "fa fa-calendar",
+      up: "fa fa-arrow-up",
+      down: "fa fa-arrow-down"
+    }
+  });
+  $('.datepicker').after("<span class=\"input-group-addon\"><span class=\"fa fa-calendar\"></span></span>");
+});

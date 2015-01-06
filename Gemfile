@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'bootstrap_form'
+gem 'bootstrap3-datetimepicker-rails'
 
 # Proper Server
 gem 'puma'
@@ -43,6 +44,11 @@ gem 'puma'
 # Fullcalendar for event showign
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
+
+# Validation Helper Gems
+gem 'valid_email'
+gem 'phony_rails'
+gem 'date_validator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

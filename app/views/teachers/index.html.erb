@@ -15,7 +15,7 @@
     <% @teachers.each do |teacher| %>
       <tr>
         <td><%= teacher.name %></td>
-        <td><%= teacher.phone %></td>
+        <td><%= teacher.phone.phony_formatted spaces: '-' %></td>
         <td><%= link_to 'Show', teacher %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
         <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Teacher', new_teacher_path %>
+<%= link_to 'New Teacher', new_teacher_path, class: 'btn btn-primary' %>

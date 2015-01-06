@@ -21,3 +21,24 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      not_a_date: "is not a date"
+      after: "cannot be in the past."
+      after_or_equal_to: "cannot be in the past."
+      before: "must be before %{date}"
+      before_or_equal_to: "must be before or equal to %{date}"
+  activerecord:
+    attributes:
+      visit:
+        lesson: "Lesson Taught"
+      teacher:
+        phone: "Phone Number"
+      person:
+        phone: "Phone Number"
+        attendance: "Times Attended Church"
+        baptism: "Baptism Date"
+        confirmation: "Confirmation Date"
+        priesthood: "Priesthood Ordination Date"
+        help: "Help Needed"
+        teacher_id: "Fellowshipper or Home Teacher"
